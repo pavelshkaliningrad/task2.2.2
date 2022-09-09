@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div>
+    <table border="1">
+        <tr>
+            <th>Color</th>
+            <th>Model</th>
+            <th>Max Speed</th>
+        </tr>
+    <th:block th:each="msg : ${messages}">
+        <tr>
+            <td th:text="${msg.getColor()}"></td>
+            <td th:text="${msg.getModel()}"></td>
+            <td th:text="${msg.getMaxSpeed()}"></td>
+        </tr>
+    </th:block>
+    </table>
+</div>
+</body>
+</html>
